@@ -59,8 +59,6 @@ def backup_databases():
         subject = "Sao lưu cơ sở dữ liệu thất bại"
         body = f"Đã xảy ra lỗi trong quá trình sao lưu: {e}"
         send_email(subject, body)
-
-# Lên lịch sao lưu vào lúc 00:00 mỗi ngày
 schedule.every().day.at("00:00").do(backup_databases)
 
 if __name__ == "__main__":
