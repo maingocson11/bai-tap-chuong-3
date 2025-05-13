@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-05-13T18:32:00.432193" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\truon\robot_login_test\login_test.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-05-13T18:32:00.857837" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-13T18:32:00.856492" elapsed="13.690233"/>
+</kw>
+<test id="s1-t1" name="Valid Login Test" line="12">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T18:32:14.553252" level="INFO">Typing text 'Admin' into text field 'id=username'.</msg>
+<msg time="2025-05-13T18:32:14.648190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-13T18:32:14.648389" level="FAIL">Element with locator 'id=username' not found.</msg>
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-13T18:32:14.552588" elapsed="0.102803">Element with locator 'id=username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.655999" elapsed="0.000049"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.656429" elapsed="0.000030"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.656811" elapsed="0.000027"/>
+</kw>
+<doc>Kiểm tra đăng nhập hợp lệ</doc>
+<status status="FAIL" start="2025-05-13T18:32:14.550570" elapsed="0.107021">Element with locator 'id=username' not found.</status>
+</test>
+<test id="s1-t2" name="Invalid Login Test" line="19">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-13T18:32:14.660505" level="INFO">Typing text 'Admin' into text field 'id=username'.</msg>
+<msg time="2025-05-13T18:32:14.738536" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-13T18:32:14.738677" level="FAIL">Element with locator 'id=username' not found.</msg>
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-13T18:32:14.660214" elapsed="0.079299">Element with locator 'id=username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.740074" elapsed="0.000031"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.740463" elapsed="0.000025"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-13T18:32:14.740882" elapsed="0.000135"/>
+</kw>
+<doc>Kiểm tra đăng nhập không hợp lệ</doc>
+<status status="FAIL" start="2025-05-13T18:32:14.659125" elapsed="0.082842">Element with locator 'id=username' not found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-13T18:32:14.744568" elapsed="2.355544"/>
+</kw>
+<status status="FAIL" start="2025-05-13T18:32:00.434778" elapsed="16.665554"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="2" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
